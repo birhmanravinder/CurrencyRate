@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CurrencyRate</string>
+    <string name="your_session_expire">Session Expire</string>
+    <string name="server_string">Server Error</string>
+    <string name="title_refresh">Refresh</string>
+    <string name="enter_value">Enter Currency</string>
+    <string name="convert">Convert</string>
+</resources>

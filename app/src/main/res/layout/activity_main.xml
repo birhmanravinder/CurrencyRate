@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:minHeight="?android:attr/actionBarSize" />
+
+    <RelativeLayout
+        android:id="@+id/rl_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:background="@drawable/login_field_bg"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:elevation="@dimen/_4sdp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_value"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/enter_value"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:gravity="center"
+            android:maxLength="10"
+            android:background="@null"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/otp_btn_bg"
+        android:elevation="@dimen/_4sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rl_edit"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_16sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/convert"
+            android:textSize="@dimen/_14sdp"
+            android:paddingStart="@dimen/_55sdp"
+            android:paddingEnd="@dimen/_55sdp"
+            android:layout_centerVertical="true"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rl_quiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_below="@+id/rl_button"/>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/AVLoadingIndicatorView"
+        android:visibility="visible"
+        app:indicatorName="LineScalePulseOutRapidIndicator"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_centerHorizontal="true"
+        app:indicatorColor="@color/purple_500" />
+
+</RelativeLayout>
